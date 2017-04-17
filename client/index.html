@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script type="text/javascript" src="./jquery-3.1.1.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    $( document ).ready(function() {
+      isLoggedIn();
+      loadPosts();
+      navigateToAccount();
+    });
+  </script>
+  <title>RideFind</title>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <img src="images/RideFind_2_GR.png" width=200px height=200px><br>
+    </div>
+
+    <div class ="navbar">
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="myaccount.html">Account</a></li>
+      </ul>
+    </div>
+
+    <div id="page_container">
+      <div id="column_center">
+        <div class="create_post">
+          <button class="button" onClick="showPostEntry()">Create Post</button>
+          <button class="button" onClick="showRideEntry()">Create Ride</button><br>
+          <div id="post_entry">
+            <textarea id="post_entry_box" name="post_entry" placeholder="Write your post here..."></textarea>
+            <button class="button_post" onClick="createPost()">Post</button>  <!--loadPosts()-->
+          </div>
+          <div id="ride_entry">
+            Host Name: <input type="text" id="host_name" name="host_name"><br>
+            Date: <input type="text" id="date" name="date"><br>
+            Time: <input type="text" id="time" name="time"><br>
+            Location: <input type="text" id="ride_location" name="ride_location"><br>
+            Description: <input type="text" id="description" name="description"><br>
+            <button class="button_post_ride">Post Ride</button>
+          </div>
+        </div>
+        <div id="posts_wrap">
+          <div class='post' id="post1"><p class="grayed">Posted By: </p><p id="user1"></p><br><br><p id="content1"></p></div>
+          <div class='post' id="post2"><p class="grayed">Posted By: </p><p id="user2"></p><br><br><p id="content2"></p></div>
+          <div class='post' id="post3"><p class="grayed">Posted By: </p><p id="user3"></p><br><br><p id="content3"></p></div>
+          <div class='post' id="post4"><p class="grayed">Posted By: </p><p id="user4"></p><br><br><p id="content4"></p></div>
+          <div class='post' id="post5"><p class="grayed">Posted By: </p><p id="user5"></p><br><br><p id="content5"></p></div>
+          <div class='post' id="post6"><p class="grayed">Posted By: </p><p id="user6"></p><br><br><p id="content6"></p></div>
+          <div class='post' id="post7"><p class="grayed">Posted By: </p><p id="user7"></p><br><br><p id="content7"></p></div>
+          <div class='post' id="post8"><p class="grayed">Posted By: </p><p id="user8"></p><br><br><p id="content8"></p></div>
+          <div class='post' id="post9"><p class="grayed">Posted By: </p><p id="user9"></p><br><br><p id="content9"></p></div>
+          <div class='post' id="post10"><p class="grayed">Posted By: </p><p id="user10"></p><br><br><p id="content10"></p></div>
+        </div>
+      </div>
+      <div id="column_left">
+
+      </div>
+      <div id="column_right">
+        <div class="login" id="login">
+          <p id="login_text">Login</p>
+          <div class="login_inputs" id="login_inputs">
+            Username: <input type="text" id="username" name="username" required><br>
+            Password: <input type="text" id="password" name="password" required><br>
+            <button type="button" class="button_register" id="button_showMore" onClick="moreInfo()">Create Account</button>
+          <div id="information"> 
+            Name: <input type="text" id="name" name="name" size="20" required><br>
+            Age: <input type="number" id="age" name="age" min="13" size="5" required><br>
+            Location: <input type="text" id="location" name="location" required><br>
+            Phone#: <input type="tel" name="phone" id="phone" size="20" pattern="\d{3}-\d{3}-\d{4}" required>
+          </div>
+            <button type="button" class="button_register" id="button_register" onClick="clickEventRegister()">Create Account</button>
+            <button type="button" class="button_login" id="button_login" onClick="login()">Enter>></button>
+          </div>
+        </div>
+          <button type="button" class="button_logout" id="button_logout" onClick="logout()">Logout</button>
+      </div>
+    </div>
+
+  </body>
+</html>

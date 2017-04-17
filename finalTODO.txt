@@ -1,0 +1,14 @@
+implement posting by users
+
+make post say poster name
+
+make account represent user data
+
+implement feature that allows user to click on another user and see their account info
+
+allow user to make account info
+
+allow user to change profile picture(form enctype = __)
+
+
+

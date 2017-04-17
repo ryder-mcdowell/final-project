@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script type="text/javascript" src="./jquery-3.1.1.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    $( document ).ready(function() {
+      isLoggedIn();
+    
+    });
+  </script>
+  <title>RideFind</title>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <img src="images/RideFind_2_GR.png" width=200px height=200px><br>
+    </div>
+
+    <div class ="navbar">
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="myaccount.html">Account</a></li>
+      </ul>
+    </div>
+
+    <div id="page_container">
+      <div id="column_center">
+        <div class="create_post">
+          <button class="button" onClick="showImageEntry()">Create Image Post</button>
+          <button class="button" onClick="showVideoEntry()">Create Video Post</button><br>
+          <div id="image_entry">
+            
+            <button class="button_post_image">Post Image</button>
+          </div>
+          <div id="video_entry">
+
+            <button class="button_post_video">Post Video</button>
+          </div>
+        </div>
+        <div class="media_wrapper">
+         <div class="image_post">
+            This is a demo image post
+            <div class="date_time_media">Posted On: ____ At: ____</div>
+         </div>
+         <div class="video_post">
+            This is a demo video post
+            <div class="date_time_media">Posted On: ____ At: ____</div>
+         </div>
+         <div class="image_post">
+            This is a demo image post
+            <div class="date_time_media">Posted On: ____ At: ____</div>
+         </div>
+         <div class="video_post">
+            This is a demo video post
+            <div class="date_time_media">Posted On: ____ At: ____</div>
+         </div>
+         <div class="image_post">
+            This is a demo image post
+            <div class="date_time_media">Posted On: ____ At: ____</div>
+         </div>
+         <div class="video_post">
+            This is a demo video post
+            <div class="date_time_media">Posted On: ____ At: ____</div>
+         </div>
+         <div class="image_post">
+            This is a demo image post
+            <div class="date_time_media">Posted On: ____ At: ____</div>
+         </div>
+         <div class="video_post">
+            This is a demo video post
+            <div class="date_time_media">Posted On: ____ At: ____</div>
+         </div>
+        </div>
+      </div>
+      <div id="column_left">
+
+      </div>
+        <div id="column_right">
+        <div class="login" id="login">
+          Login
+          <div class="login_inputs" id="login_inputs">
+            Username: <input type="text" id="username" name="username" required><br>
+            Password: <input type="text" id="password" name="password" required><br>
+            <button type="button" class="button_register" id="button_showMore" onClick="moreInfo()">Create Account</button>
+          <div id="information"> 
+            Name: <input type="text" id="name" name="name" size="5" required><br>
+            Age: <input type="number" id="age" name="age" min="13" size="5" required><br>
+            Location: <input type="text" id="location" name="location" required><br>
+            Phone#: <input type="tel" name="phone" id="phone" size="20" pattern="\d{3}-\d{3}-\d{4}" required>
+          </div>
+            <button type="button" class="button_register" id="button_register" onClick="clickEventRegister()">Create Account</button>
+            <button type="button" class="button_login" id="button_login" onClick="login()">Enter>></button>
+          </div>
+        </div>
+          <button type="button" class="button_logout" id="button_logout" onClick="logout()">Logout</button>
+      </div>
+    </div>
+
+  </body>
+</html>
